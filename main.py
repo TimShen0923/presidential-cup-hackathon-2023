@@ -200,7 +200,7 @@ def vehicle_subsidy(
         
         df_vehicle_subsidy = pd.DataFrame(objs).set_index("year")
 
-        # Based on result to predict Vehicle Market Demand rate
+        # Based on result to predict Vehicle Market Demand rate    
         
         df_vehicle_market_share_predicted: pd.DataFrame = pd.DataFrame(
             {
@@ -225,6 +225,7 @@ def vehicle_subsidy(
         )
 
         # Calculate Vehicle Sale & Age composition by year
+        # Combine tsai_2023_sec_3_2_experiment
         
         vehicle_sale_by_year, df_vehicle_age_composition_by_year = pipeline(
             years=years,
